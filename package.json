@@ -4,13 +4,12 @@
   "author": "f-fly",
   "description": "Kleines Tool zum Anwenden regulärer Ausdrücke",
   "dependencies" : {
-    "bower"   :  "*",
-    "inliner" :  "*",
-    "jade" :  "*",
-    "jsdom" :  "*",
-    "less" :  "*",
-    "uglify-js" :  "*",
-    "requirejs" :  "*"
+    "bower"   :  "1.0.x",
+    "inliner" :  "0.1.x",
+    "jade" :  "0.34.x",
+    "less" :  "1.4.x",
+    "uglify-js" :  "2.3.x",
+    "requirejs" :  "2.1.x"
   },
   "license": "MIT",
   "engines": {
