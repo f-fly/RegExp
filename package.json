@@ -1,0 +1,19 @@
+{
+  "name": "RegExp",
+  "version": "0.1.0",
+  "author": "f-fly",
+  "description": "Kleines Tool zum Anwenden regulärer Ausdrücke",
+  "dependencies" : {
+    "bower"   :  "*",
+    "inliner" :  "*",
+    "jade" :  "*",
+    "jsdom" :  "*",
+    "less" :  "*",
+    "uglify-js" :  "*",
+    "requirejs" :  "*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
