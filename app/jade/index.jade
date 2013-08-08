@@ -1,0 +1,45 @@
+doctype 5
+html
+  head
+    title RegExp
+    block load
+      link(rel="stylesheet/less", type="text/css", href="less/style.less")
+      script(src="scripts/vendor/less/dist/less-1.4.2.min.js",type="text/javascript")
+      script(src='scripts/vendor/requirejs/require.js',data-main='scripts/main.js')
+  body
+    .container
+      h2: a(name="content", data-toggle="collapse", data-target="#content") content
+      #content.container.collapse
+        pre
+        form
+          .input-group
+            
+            input.form-control(placeholder="Copy / Paste")
+            span.input-group-btn
+              button.btn.btn-default.append append
+          
+     
+      
+      h2: a(name="parser", data-toggle="collapse", data-target="#parser") parser
+
+      #parser.container.collapse
+        form
+          .input-group
+            span.input-group-addon /
+            input.form-control(placeholder="Regular Expression")
+            span.input-group-addon /i
+            span.input-group-btn
+              button.btn.btn-success.favorite add favorite
+        h2: a(name="favorites", data-toggle="collapse", data-target="#favorites") favorites
+
+        #favorites.functions.accordion.collapse
+          
+ 
+
+
+      
+      h2: a(name="result", data-toggle="collapse", data-target="#result") result
+
+      #result.collapse.container
+        pre
+          

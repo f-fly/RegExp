@@ -1,0 +1,14 @@
+{
+  "name": "RegExp",
+  "version": "0.0.1",
+  "dependencies": {
+    "requirejs": "latest",
+    "jquery": "latest",
+    "backbone-amd": "latest",
+    "underscore-amd": "latest",
+    "backbone.localStorage": "latest",
+    "bootstrap": "latest",
+    "less": "latest",
+    "codemirror": "latest"
+  }
+}
