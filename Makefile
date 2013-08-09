@@ -24,6 +24,8 @@ cleanup:
 	mkdir dist
 	
 update:
+	npm install
+	npm update
 	bower install
 	bower update
 
