@@ -3,6 +3,10 @@ RegExp
 Erstellt eine einzelne HTML Datei die zum Anwenden von regulären Ausdrücken auf
 beliebige Daten verwendet werden kann.
 
+Installation
+------------
+> git clone https://github.com/f-fly/RegExp && cd RegExp && make
+
 Benutzung
 ---------
 Die Daten werden entweder per copy/paste in das Programm eingeführt oder per
