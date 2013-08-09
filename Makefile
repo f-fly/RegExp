@@ -1,19 +1,20 @@
+npmbin = $(shell npm bin)/
 default: release
 
 test: 
-	jade jade/index.jade -P -o .
+	$(npmbin)jade jade/index.jade -P -o .
 
 js: cleanup update
-	node r.js -o build/build.js
-	uglifyjs tmp/js/script.js -m -c -o tmp/js/script.min.tmp 
+	$(npmbin)r.js -o build/build.js
+	$(npmbin)uglifyjs tmp/js/script.js -m -c -o tmp/js/script.min.tmp 
 	printf "\xEF\xBB\xBF" > "tmp/js/script.min.js";
 	cat "licence.js" "tmp/js/script.min.tmp" >> "tmp/js/script.min.js"
 
 html: cleanup update
-	jade jade/release.jade -o tmp
+	$(npmbin)jade jade/release.jade -o tmp
 
 css: cleanup update
-	lessc -x less/style.less > tmp/css/style.css
+	$(npmbin)lessc -x less/style.less > tmp/css/style.css
   
 cleanup:
 	rm -rf tmp
@@ -26,9 +27,9 @@ cleanup:
 update:
 	npm install
 	npm update
-	bower install
-	bower update
+	$(npmbin)bower install
+	$(npmbin)bower update
 
 release: css html js
-	inliner tmp/release.html | tail -1 > dist/index.html
+	$(npmbin)inliner tmp/release.html | tail -1 > dist/index.html
 	rm -rf tmp
