@@ -19,7 +19,8 @@ css: cleanup dependencies
 cleanup:
 	rm -rf dist
 	mkdir dist
-	rm -rf build/tmp/*
+	rm -rf build/tmp
+	mkdir build/tmp
 
 dependencies:
 	npm install
