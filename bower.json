@@ -1,14 +1,14 @@
 {
   "name": "RegExp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
-    "requirejs": "latest",
-    "jquery": "latest",
-    "backbone-amd": "latest",
-    "underscore-amd": "latest",
-    "backbone.localStorage": "latest",
-    "bootstrap": "latest",
-    "less": "latest",
-    "codemirror": "latest"
+    "requirejs": "2.1.x",
+    "jquery": "2.0.x",
+    "backbone-amd": "1.0.x",
+    "underscore-amd": "1.5.x",
+    "backbone.localStorage": "1.1.x",
+    "bootstrap": "3.0.x",
+    "less": "1.4.x",
+    "codemirror": "3.15.x"
   }
 }

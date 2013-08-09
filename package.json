@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "author": "f-fly",
   "description": "Kleines Tool zum Anwenden regulärer Ausdrücke",
+  "repository" : "https://github.com/f-fly/RegExp",
   "dependencies" : {
     "bower"   :  "1.0.x",
     "inliner" :  "0.1.x",
@@ -11,8 +12,5 @@
     "uglify-js" :  "2.3.x",
     "requirejs" :  "2.1.x"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=0.6"
-  }
-}
+  "license": "MIT"
+ }

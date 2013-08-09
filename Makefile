@@ -1,37 +1,32 @@
-all: 
-	jade app/jade/index.jade -P -o app
+default: release
+
+test: 
+	jade jade/index.jade -P -o .
 
 js: cleanup update
-	echo "js ..."
-	node ../node_modules/requirejs/bin/r.js -o app/build/build.js
-	echo "uglify..."
-	uglifyjs dist/js/script.js -m -c -o dist/js/script.min.tmp 
-	printf "\xEF\xBB\xBF" > "dist/js/script.min.js";
-	cat "app/licence.js" "dist/js/script.min.tmp" >> "dist/js/script.min.js"
-	rm "dist/js/script.min.tmp"
-	echo "js done"
+	node r.js -o build/build.js
+	uglifyjs tmp/js/script.js -m -c -o tmp/js/script.min.tmp 
+	printf "\xEF\xBB\xBF" > "tmp/js/script.min.js";
+	cat "licence.js" "tmp/js/script.min.tmp" >> "tmp/js/script.min.js"
 
 html: cleanup update
-	jade app/jade/release.jade -o dist
-	mv dist/release.html dist/index.html
-	# cp app/css/images/* dist/css/images
-	# @cd release;ls -d images/* >> "offline.appcache"; ls -d css/images/* >> "offline.appcache";
+	jade jade/release.jade -o tmp
 
 css: cleanup update
-	lessc -x app/less/style.less > dist/css/style.css
+	lessc -x less/style.less > tmp/css/style.css
   
 cleanup:
-	echo "cleanup..."
-	rm -rf dist/*
-	mkdir dist/js
-	mkdir dist/css
-	mkdir dist/images
-	mkdir dist/css/images
-	echo "cleanup done"
+	rm -rf build
+	rm -rf dist
+	mkdir tmp
+	mkdir tmp/js
+	mkdir tmp/css
+	mkdir dist
 	
 update:
 	bower install
+	bower update
 
 release: css html js
-	inliner dist/index.html | tail -1 > dist/regexp.html
-	# inliner https://c9.io/f_fly/backbone/workspace/regexp/dist/index.html > dist/regexp.html
+	inliner tmp/release.html | tail -1 > dist/index.html
+	rm -rf tmp

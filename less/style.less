@@ -1,6 +1,5 @@
-@import "../scripts/vendor/bootstrap/less/bootstrap.less";
-@import (less) "../scripts/vendor/codemirror/lib/codemirror.css";
-// @import "./bootswatch.less";
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import (less) "../bower_components/codemirror/lib/codemirror.css";
 
 
 @content-height: 500px;
@@ -23,6 +22,7 @@
       }
       div.fadetext {
         #gradient .vertical(fade(@pre-bg, 0%), 50%, @pre-bg, 90%);
+        background-color:transparent;
         position:absolute;
         display:block;
         left:0;
