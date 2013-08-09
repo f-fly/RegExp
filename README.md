@@ -46,7 +46,8 @@ Ausdruck wäre in diesem Fall
 
 Ein Parser, der alle diese Summen findet, sie zusammenzählt und am Ende die
 Summe ausgibt
-'''
+
+```
 // Initialisieren
 if(this.key() == 0) {
   this.data("summe", 0);
@@ -60,4 +61,4 @@ this.data("summe", neue_summe);
 if(this.key() == this.length() - 1) {
   this.write("Summe: " + this.data("summe"));
 }
-'''
+```
