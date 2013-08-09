@@ -16,7 +16,7 @@ css: cleanup update
 	lessc -x less/style.less > tmp/css/style.css
   
 cleanup:
-	rm -rf build
+	rm -rf tmp
 	rm -rf dist
 	mkdir tmp
 	mkdir tmp/js
