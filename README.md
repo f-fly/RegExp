@@ -46,17 +46,18 @@ Ausdruck wäre in diesem Fall
 
 Ein Parser, der alle diese Summen findet, sie zusammenzählt und am Ende die
 Summe ausgibt
+'''
+// Initialisieren
+if(this.key() == 0) {
+  this.data("summe", 0);
+}
+ 
+// Eigentliche Funtion
+var neue_summe = this.data("summe") + parseInt(this.item(1));
+this.data("summe", neue_summe);
 
-> // Initialisieren
-> if(this.key() == 0) {
->   this.data("summe", 0);
-> }
-> 
-> // Eigentliche Funtion
-> var neue_summe = this.data("summe") + parseInt(this.item(1));
-> this.data("summe", neue_summe);
-> 
-> // Am Ende ausgeben
-> if(this.key() == this.length() - 1) {
->   this.write("Summe: " + this.data("summe"));
-> }
+// Am Ende ausgeben
+if(this.key() == this.length() - 1) {
+  this.write("Summe: " + this.data("summe"));
+}
+'''

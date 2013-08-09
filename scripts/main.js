@@ -1,5 +1,6 @@
 require.config({
   baseUrl: "scripts",
+  waitSeconds: 300, // http://stackoverflow.com/questions/14279962/require-js-error-load-timeout-for-modules-backbone-jquerymobile
   paths: {
     'jquery': '../bower_components/jquery/jquery',
     'underscore': '../bower_components/underscore-amd/underscore',
