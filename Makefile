@@ -6,23 +6,20 @@ test:
 
 js: cleanup dependencies
 	$(npmbin)r.js -o build/build.js
-	$(npmbin)uglifyjs tmp/js/script.js -m -c -o tmp/js/script.min.tmp 
-	printf "\xEF\xBB\xBF" > "tmp/js/script.min.js";
-	cat "licence.js" "tmp/js/script.min.tmp" >> "tmp/js/script.min.js"
+	$(npmbin)uglifyjs build/tmp/script.js -m -c -o build/tmp/script.min.tmp 
+	printf "\xEF\xBB\xBF" > "build/tmp/script.min.js";
+	cat "licence.js" "build/tmp/script.min.tmp" >> "build/tmp/script.min.js"
 
 html: cleanup dependencies
-	$(npmbin)jade jade/release.jade -o tmp
+	$(npmbin)jade jade/release.jade -o build/tmp
 
 css: cleanup dependencies
-	$(npmbin)lessc -x less/style.less > tmp/css/style.css
+	$(npmbin)lessc -x less/style.less > build/tmp/style.css
   
 cleanup:
-	rm -rf tmp
 	rm -rf dist
-	mkdir tmp
-	mkdir tmp/js
-	mkdir tmp/css
 	mkdir dist
+	rm -rf build/tmp/*
 
 dependencies:
 	npm install
@@ -34,5 +31,4 @@ update:
 	$(npmbin)bower update
 
 release: css html js
-	$(npmbin)inliner tmp/release.html | tail -1 > dist/index.html
-	rm -rf tmp
+	$(npmbin)inliner build/tmp/release.html | tail -1 > dist/index.html
