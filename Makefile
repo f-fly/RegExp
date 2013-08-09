@@ -6,9 +6,10 @@ test:
 
 js: cleanup dependencies
 	$(npmbin)r.js -o build.js
+
 	$(npmbin)uglifyjs build/script.js -m -c -o build/script.min.tmp 
-	printf "\xEF\xBB\xBF" > "build/script.min.js";
-	cat "licence.js" "build/script.min.tmp" >> "build/script.min.js"
+	# printf "\xEF\xBB\xBF" > "build/script.min.js";
+	cat "licence.js" "build/script.min.tmp" > "build/script.min.js"
 
 html: cleanup dependencies
 	$(npmbin)jade jade/release.jade -o build
