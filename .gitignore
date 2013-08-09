@@ -3,7 +3,7 @@ node_modules
 bower_components
 index.html
 
-.c9history
+.c9revisions
 lib-cov
 *.seed
 *.log
