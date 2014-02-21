@@ -4,7 +4,7 @@ bower_components
 build
 index.html
 .c9revisions
-
+.settings
 
 lib-cov
 *.seed
