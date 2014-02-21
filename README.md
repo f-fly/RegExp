@@ -1,5 +1,5 @@
-RegExp (2014)
-=============
+RegExp
+======
 Erstellt eine einzelne HTML Datei die zum Anwenden von regulären Ausdrücken auf
 beliebige Daten verwendet werden kann.
 
