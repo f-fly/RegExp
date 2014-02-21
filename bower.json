@@ -7,7 +7,7 @@
     "backbone-amd": "1.0.x",
     "underscore-amd": "1.5.x",
     "backbone.localStorage": "1.1.x",
-    "bootstrap": "3.0.x",
+    "bootstrap": "2.3.x",
     "less": "1.4.x",
     "codemirror": "3.15.x"
   }
